@@ -55,7 +55,6 @@ class opAuthMailAddressActions extends opAuthAction
     opActivateBehavior::enable();
     $this->forward404Unless($authMode === $this->getUser()->getCurrentAuthMode());
 
-    $this->getUser()->setMemberId($memberConfig->getMemberId());
     $this->getUser()->setIsSNSRegisterBegin(true);
 
     $this->redirect('member/registerInput');
